@@ -20,7 +20,7 @@ function App() {
     }
 
     const handleSubmit=(e)=>{
-      e.preventDefault();
+      // e.preventDefault();
       const currentDate= new Date()
       const enteredDate = new Date(formData.dob);
       const isFutureDate =
