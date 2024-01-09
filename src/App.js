@@ -9,18 +9,18 @@ function App() {
     phone:'',
     dob:''
   })
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const openForm=()=>{
-    document.querySelector('.modal').style.display = 'block';
-    document.querySelector('.overlay').style.display ='block';
+    setIsModalOpen(true)
     }
 
     const closeForm=()=>{
-      document.querySelector('.modal').style.display = 'none';
-    document.querySelector('.overlay').style.display ='none';
+      setIsModalOpen(false)
     }
 
     const handleSubmit=(e)=>{
-      // e.preventDefault();
+      e.preventDefault();
       const currentDate= new Date()
       const enteredDate = new Date(formData.dob);
       const isFutureDate =
@@ -38,6 +38,7 @@ function App() {
       if(isFutureDate){
         alert('Invalid date of birth. Date of Birth cannot be in future')
       }
+      setIsModalOpen(false)
     }
 
     const formatDate=(inputDate)=>{
@@ -58,10 +59,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className='overlay' onClick={closeForm}></div>
+      {isModalOpen&&<div className='overlay' onClick={closeForm}></div>}
       <h1>User Details Modal</h1>
       <button onClick={openForm}>Open Form</button>
-      <Modal handleSubmit={handleSubmit} handleChange={handleChange}/>
+      {isModalOpen&&<Modal handleSubmit={handleSubmit} handleChange={handleChange}/>}
     </div>
   );
 }

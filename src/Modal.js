@@ -8,7 +8,7 @@ const handleSubmit=(e)=>{
 
 
   return (
-    <div className="modal" style={{display:'none'}}>
+    <div className="modal">
         <div className="modal-content">
             <h1>Fill Details</h1>
             <form onSubmit={handleSubmit}>
