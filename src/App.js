@@ -33,9 +33,11 @@ function App() {
       if(formData.phone.length!==10){
         console.log(formData.phone.length)
         alert('Invalid phone number. Please enter a 10-digit phone number.')
+        return;
       }
       if(isFutureDate){
         alert('Invalid date of birth. Date of Birth cannot be in future')
+        return;
       }
       setIsModalOpen(false)
     }
