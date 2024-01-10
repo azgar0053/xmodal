@@ -11,7 +11,6 @@ const handleSubmit=(e)=>{
   return (
     <div className="modal" style={{display:'block'}}>
                     <h1>Fill Details</h1>
-        <div className="modal-content">
             <form onSubmit={handleSubmit}>
                 <label htmlFor='username'>Username:</label>
                 <input id='username' type='text' required value={props.username} onChange={props.handleChange} name='username'/><br/>
@@ -23,7 +22,6 @@ const handleSubmit=(e)=>{
                 <input id='dob' type='date' required value={props.dob} onChange={props.handleChange} name='dob'/><br/>
                 <button type='submit' className='submit-button'>Submit</button>
             </form>
-        </div>
 </div>
   )
 }
