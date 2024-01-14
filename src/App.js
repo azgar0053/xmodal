@@ -29,7 +29,6 @@ function App() {
 
     const handleSubmit=(e)=>{
       console.log('submit btn clicked')
-      setIsModalOpen(true)
       const currentDate= new Date()
       const enteredDate = new Date(formData.dob);
       const isFutureDate =
