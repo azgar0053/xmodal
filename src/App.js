@@ -24,6 +24,7 @@ function App() {
     }
 
     const handleSubmit=(e)=>{
+      e.preventDefault()
       console.log('submit btn clicked')
       const currentDate= new Date()
       const enteredDate = new Date(formData.dob);
@@ -44,17 +45,21 @@ function App() {
         alert('Invalid date of birth. Date of Birth cannot be in future')
         return;
       }
+    
+      const form = e.target;
+      form.submit();
       setIsModalOpen(false)
     }
 
-    const formatDate=(inputDate)=>{
+    const formatDate = (inputDate) => {
       const date = new Date(inputDate);
-      const day = date.getDate();
-      const month = date.getMonth()+1;
       const year = date.getFullYear();
-      return `${day}-${month}-${year}`
-    }
-
+      const month = `0${date.getMonth() + 1}`.slice(-2);
+      const day = `0${date.getDate()}`.slice(-2);
+    
+      return `${year}-${month}-${day}`;
+    };
+    
     const handleChange=(e)=>{
       const {name , value}= e.target;
 
