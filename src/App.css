@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-.overlay{
+.modal{
   display: block;
   z-index: 5;
   width: 100%;
@@ -11,6 +11,10 @@
   left: 0;
   top: 0;
 }
+
+/* .modal.open {
+  display: block;
+} */
 
 .modal-content {
   z-index: 10;

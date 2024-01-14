@@ -9,10 +9,10 @@ const handleSubmit=(e)=>{
 
 
   return (
-    <div className="modal" style={{display:'block'}}>
-          <div className='modal-content'>
-            <h1>Fill Details</h1>
-            < form onSubmit={handleSubmit} >
+    <div className={`modal ${props.isModalOpen? 'open':''}`}>
+          <div className='modal-content'> 
+               < form onSubmit={handleSubmit} >
+               <h1>Fill Details</h1>
                 <label htmlFor='username'>Username:</label>
                 <input id='username' type='text' required value={props.username} onChange={props.handleChange} name='username'/><br/>
                 <label htmlFor='email'>Email Address:</label>
