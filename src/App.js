@@ -11,6 +11,8 @@ function App() {
   })
 
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+
   const openForm=()=>{
     setIsModalOpen(true)
     }
@@ -20,6 +22,7 @@ function App() {
     }
 
     const handleSubmit=(e)=>{
+      setIsModalOpen(true)
       const currentDate= new Date()
       const enteredDate = new Date(formData.dob);
       const isFutureDate =
