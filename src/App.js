@@ -13,10 +13,6 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
 
-  // const openForm=()=>{
-  //   setIsModalOpen(true)
-
-  //   }
 
   const openForm = () => {
     setIsModalOpen(true);
@@ -48,6 +44,7 @@ function App() {
         alert('Invalid date of birth. Date of Birth cannot be in future')
         return;
       }
+      setIsModalOpen(false)
     }
 
     const formatDate=(inputDate)=>{
