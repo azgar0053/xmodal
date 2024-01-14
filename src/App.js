@@ -42,7 +42,6 @@ function App() {
         alert('Invalid date of birth. Date of Birth cannot be in future')
         return;
       }
-      setIsModalOpen(false)
     }
 
     const formatDate=(inputDate)=>{
